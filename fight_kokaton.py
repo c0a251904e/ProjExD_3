@@ -153,14 +153,14 @@ def main():
                     pg.display.update()
                     time.sleep(1)
 
-        # 要素がNoneでないものだけのリストに更新
+                                                    # 要素がNoneでないものだけのリストに更新
         bombs = [b for b in bombs if b is not None]
         beams = [b for b in beams if b is not None]
 
         key_lst = pg.key.get_pressed()
         bird.update(key_lst, screen)
 
-        # ビームの更新と画面外削除
+                                                      # ビームの更新と画面外削除
         new_beams = []
         for beam in beams:
             if beam.update(screen):  # 画面内の場合のみTrueが返り，新しいリストに残る
